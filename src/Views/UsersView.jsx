@@ -22,11 +22,11 @@ const UsersView = () => {
           </div>
         <div>
           {users ? (
-            <div className=" py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-6 gap-6">
+            <div className=" py-4 px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-6 gap-6">
             {users.length > 0 &&
               users.map((user) => {
                 return (
-                  <Link to={'/users/'+user.id} className="pt-3 border-2 border-gray-200 rounded-xl h-72 w-52 items-center p-2" key={user.id}>
+                  <Link to={'/users/'+user.id} className="pt-3 border-2 border-gray-200 rounded-xl h-72 w-52 items-center p-2 hover:scale-110 hover:bg-cyan-100" key={user.id}>
                     <div className=" border-2 border-gray-400  w-full rounded-xl p-1">
                         <img className="rounded-full w-full" src={user.avatar} alt="" />
                     </div>

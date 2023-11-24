@@ -15,7 +15,7 @@ const UserInformationView = () => {
   }, []);
 
   const handleClick = ()=>{
-    navigate('/users');
+    navigate('/');
   }
 
   return (
@@ -51,4 +51,3 @@ const UserInformationView = () => {
 };
 export default UserInformationView;
 
-{/* <div className=" w-full flex items-center justify-center gap-20 py-20 "></div> */}

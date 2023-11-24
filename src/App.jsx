@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/users" element={<UsersView/>}/>
+      <Route path="/" element={<UsersView/>}/>
       <Route path="/users/:id" element={<UserInformationView/>}/>
     </Routes>
 
