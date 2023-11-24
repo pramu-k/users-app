@@ -19,26 +19,26 @@ const UserInformationView = () => {
   }
 
   return (
-    <div>
-      <button onClick={handleClick}>Back</button>
-      <div>
+    <div className="w-screen max-w-6xl flex flex-col items-center mx-auto">
+      <button className="py-4 bg-cyan-500 w-full text-left px-4 text-white" onClick={handleClick}>Back</button>
+      <div className="mt-20">
         {user ? (
-          <div>
-            <div>
-              <img src={user.avatar} alt="" />
+          <div className="grid sm:grid-cols-2 max-w-3xl items-center">
+            <div className="h-48 w-48 bg-gray-100 p-2 m-2 justify-self-center">
+              <img className="rounded-full w-full " src={user.avatar} alt="" />
             </div>
-            <div>
-                <div>
-                    <h1>First Name</h1>
-                    <h1>{user.first_name}</h1>
+            <div className="bg-gray-100 h-32 flex flex-col justify-between py-2 px-4 rounded-xl">
+                <div className="flex ">
+                    <h1 className="w-32">First Name</h1>
+                    <h1 className=" flex-1">{user.first_name}</h1>
                 </div>
-                <div>
-                    <h1>Last Name</h1>
-                    <h1>{user.last_name}</h1>
+                <div className="flex">
+                    <h1 className="w-32">Last Name</h1>
+                    <h1 className="flex-1">{user.last_name}</h1>
                 </div>
-                <div>
-                    <h1>Email</h1>
-                    <h1>{user.email}</h1>
+                <div className="flex">
+                    <h1 className="w-32">Email</h1>
+                    <h1 className="flex-1">{user.email}</h1>
                 </div>
             </div>
           </div>
@@ -50,3 +50,5 @@ const UserInformationView = () => {
   );
 };
 export default UserInformationView;
+
+{/* <div className=" w-full flex items-center justify-center gap-20 py-20 "></div> */}

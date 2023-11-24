@@ -21,8 +21,8 @@ const UsersView = () => {
             <h1 className="text-lg">Users</h1>
           </div>
         <div>
-          
-          <div className=" py-4 flex  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-6 gap-6">
+          {users ? (
+            <div className=" py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-6 gap-6">
             {users.length > 0 &&
               users.map((user) => {
                 return (
@@ -39,6 +39,10 @@ const UsersView = () => {
                 );
               })}
           </div>
+          ):(
+            <div>Loading...</div>
+          )}
+          
         </div>
       </div>
     </div>
