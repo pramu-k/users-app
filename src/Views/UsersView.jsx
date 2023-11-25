@@ -8,7 +8,7 @@ const UsersView = () => {
   useEffect(() => {
     axios.get("/users?page=1").then((response) => {
       setUsers(response.data.data);
-    });
+    }).catch(error=>console.log(error));
   }, []);
 
   return (

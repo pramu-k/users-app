@@ -11,7 +11,7 @@ const UserInformationView = () => {
     
     axios.get("/users/" + id).then((response) => {
       setUser(response.data.data);
-    });
+    }).catch(error=>console.log(error));
   }, []);
 
   const handleClick = ()=>{
